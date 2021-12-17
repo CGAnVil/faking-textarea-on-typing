@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        h2 {
+            padding-left: 100px;
+        }
+
+        textarea {
+            width: 500px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+<h2>Type anything slowly</h2>
+<textarea id="txt" onkeydown="type1()" ></textarea>
+<script>
+    let count = 0;
+    let sentence = ['T', 'h', 'ấ', 'y', ' g', 'õ', ' s', 'a', 'i', ' m', 'à', ' v', 'ẫ', 'n', ' c', 'ố', ' g', 'õ', ' à', ' !!!', ' NOOB', ' DETECTED!!!']
+    let text = ''
+    function type1() {
+        text = document.getElementById('txt').value
+        text = text + sentence[count]
+        document.getElementById('txt').value=text
+        count++;
+    }
+</script>
+</body>
+</html>
